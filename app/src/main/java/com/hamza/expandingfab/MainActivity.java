@@ -11,6 +11,7 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -124,7 +125,9 @@ public class MainActivity extends AppCompatActivity{
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
                 button.setRotation(0);
+                //animator.setListener(null);
                 button.setY(fab.getY());
+
             }
         });
     }
